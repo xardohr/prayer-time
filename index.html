@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -22,6 +30,16 @@
                 <ion-icon class="today-icon" name="stopwatch-outline"></ion-icon>
                 <p class="today">Today's information</p>
             </div>
+            <!-- out of the flow of the page -->
+            <div class="another-city-container">
+                <p class="another-city">ANOTHER CITY</p>
+                <ion-icon class="another-city-icon"name="compass-outline"></ion-icon>
+            </div>
+            <form class="form hidden">
+                <input type="text" placeholder="Enter City name" maxlength="10">
+                <ion-icon class="search-icon"name="search-outline"></ion-icon>
+
+            </form>
         </div>
         <div class="lower-part">
             <div class="today-time-container">

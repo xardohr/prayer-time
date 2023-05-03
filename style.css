@@ -1,10 +1,15 @@
 html{
     font-size: 62.5%;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+
 }
 *{
     padding: 0;
     margin: 0;
 }
+
+
 .container {
     position: absolute;
     top: 50%;
@@ -33,12 +38,12 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: brown;
     background-image: url('images/nick-fewings-wmBPyy8WJ-Q-unsplash.jpg');
     background-size: cover;
     background-position: center;
     border-top-left-radius:8px ;
     border-top-right-radius:8px ;
+    position: relative;
     
 }
 .header{
@@ -76,6 +81,60 @@ h1{
     color: white;
 }
 
+.another-city-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #129603;
+    color: white;
+    position: absolute;
+    top: 20rem;
+    right:0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.another-city-container:hover{
+    background-color: #4666FF;
+}
+.another-city-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* input */
+
+.form{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+}
+
+input{
+    background-color: transparent;
+    width: 30rem;
+    height: 4rem;
+    padding-left: 1rem;
+    outline: none;
+    color: white;
+}
+input::placeholder{
+    color: rgb(179, 179, 179);
+}
+.search-icon{
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.359);
+    font-weight: bold;
+}
+
 .footer{
     display: flex;
     align-items: center;
@@ -83,7 +142,7 @@ h1{
     font-size: 1.5rem;
     font-weight: bold;
     color:rgba(1, 56, 1, 0.849) ;
-    width: 15rem;
+    /* width: 15rem; */
     /* border-bottom:3px solid orange; */
 }
 
@@ -151,5 +210,7 @@ h1{
     font-size: 1.7rem;
 }
 
-
+.hidden{
+    display: none;
+}
 /*  */
