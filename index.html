@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="upper-part">
-            <div class="header">
-                <h1>Prayer <span class="header-title">Time</span></h1>
-                <div class="location">
-                    <ion-icon class="location-icon"name="location-outline"></ion-icon>
-                    <p class="city-name">MECCA</p>
-                    <p class="country-name">SAUDIA</p>
-                </div>
+      <div class="upper-part">
+        <div class="header">
+          <h1>Prayer <span class="header-title">Time</span></h1>
+          <div class="location">
+            <ion-icon class="location-icon" name="location-outline"></ion-icon>
+            <p class="city-name"></p>
+            <p class="country-name"></p>
+            <div class="temp-container">
+              <p class="temp"></p>
+              <p class="celcius">℃</p>
             </div>
-            <div class="footer">
-                <ion-icon class="today-icon" name="stopwatch-outline"></ion-icon>
-                <p class="today">Today's information</p>
-            </div>
-            <!-- out of the flow of the page -->
-            <div class="another-city-container">
-                <p class="another-city">ANOTHER CITY</p>
-                <ion-icon class="another-city-icon"name="compass-outline"></ion-icon>
-            </div>
-            <form class="form hidden">
-                <input type="text" placeholder="Enter City name" maxlength="10">
-                <ion-icon class="search-icon"name="search-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="footer">
+          <ion-icon class="today-icon" name="stopwatch-outline"></ion-icon>
+          <p class="today">Today's information</p>
+        </div>
+        <!-- out of the flow of the page -->
+        <div class="another-city-container">
+          <p class="another-city">ANOTHER CITY</p>
+          <ion-icon class="another-city-icon" name="compass-outline"></ion-icon>
+        </div>
+        <form class="form hidden">
+          <input
+            class="input"
+            type="text"
+            placeholder="Enter City name"
+            maxlength="10"
+          />
+          <ion-icon class="search-icon" name="search-outline"></ion-icon>
+        </form>
+        <div class="overlay2 hidden"></div>
+      </div>
+      <div class="lower-part">
+        <div class="today-time-container">
+          <div class="today-time" id="today-time"></div>
+          <!-- <div class="date-container">
+            <p class="current-day">
+              Monday<span class="current-date">15th</span>
+            </p>
+          </div> -->
+        </div>
+        <div class="fajr-container">
+          <p class="fajr">Fajr</p>
+          <p class="fajr-time"></p>
+        </div>
+        <div class="sunrise-container">
+          <p class="sunrise">Sunrise</p>
+          <p class="sunrise-time"></p>
+        </div>
+        <div class="dohr-container">
+          <p class="dohr">Dhuhr</p>
+          <p class="dohr-time"></p>
+        </div>
+        <div class="asr-container">
+          <p class="asr">Asr</p>
+          <p class="asr-time"></p>
+        </div>
+        <div class="maghrib-container">
+          <p class="maghrib">Maghrib</p>
+          <p class="maghrib-time"></p>
+        </div>
+        <div class="isha-container">
+          <p class="isha">Isha</p>
+          <p class="isha-time"></p>
+        </div>
+      </div>
+      <div class="overlay3 hidden"></div>
+    </div>
+    <div class="overlay"></div>
 
-            </form>
-        </div>
-        <div class="lower-part">
-            <div class="today-time-container">
-                <div id="today-time">5:50</div>
-                <div class="date-container">
-                    <p class="current-day">Monday<span class="current-date">15th</span></p>
-                </div>
-            </div>
-            <div class="fajr-container">
-                <p class="fajr">Fajr</p>
-                <p class="fajr-time">12:02</p>
-            </div>
-            <div class="sunrise-container">
-                <p class="sunrise">Sunrise</p>
-                <p class="sunrise-time">12:02</p>
-            </div>
-            <div class="dohr-container">
-                <p class="dohr">Dhuhr</p>
-                <p class="dohr-time">12:02</p>
-            </div>
-            <div class="asr-container">
-                <p class="asr">Asr</p>
-                <p class="asr-time">12:02</p>
-            </div>
-            <div class="maghrib-container">
-                <p class="maghrib">Maghrib</p>
-                <p class="maghrib-time">12:02</p>
-            </div>
-            <div class="isha-container">
-                <p class="isha">Isha</p>
-                <p class="isha-time">12:02</p>
-            </div>
-        </div>
-    </div>
-    <div class="overlay">
-    </div>
     <script src="index.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
